@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/SandeshCharka/Project3/issues"
   },
-  "homepage": "https://github.com/SandeshCharka/Project3#readme"
+  "homepage": "https://github.com/SandeshCharka/Project3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19"
+  }
 }
