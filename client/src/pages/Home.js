@@ -1,11 +1,14 @@
 import React from "react";
+import Navbar from "../components/layout/Navbar";
+import Landing from "../components/layout/Landing";
 
 
 function Home() {
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <div className="App">
+        <Navbar />
+        <Landing />
+      </div>
     );
 }
 
