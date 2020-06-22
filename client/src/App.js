@@ -6,13 +6,12 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./uilts/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 
+import Navbar from "./components/layout/Navbar";
+import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-
-import Home from "./pages/Home";
-import NoMatch from "./pages/NoMatch";
 
 import './App.css';
 
@@ -40,13 +39,13 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/noMatch" component={NoMatch} />
-          <Switch>
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          </Switch>
+            <Navbar />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Switch>
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            </Switch>
         </Router>
       </Provider>
     );
