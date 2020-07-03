@@ -3,8 +3,21 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+const socketio = require("socket.io");
+const http = require("http");
 
 const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
+
+io.on("connection", (socket) => {
+  console.log("we have a new connection!");
+  
+  socket.on("disconnect", () => {
+    console.log("User had left!");
+  })
+})
+
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -29,6 +42,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
+app.use("/", users);
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+server.listen(port, () => console.log(`Server up and running on port ${port} !`));

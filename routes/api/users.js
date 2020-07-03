@@ -93,4 +93,8 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  res.send("server is up and running");
+});
+
 module.exports = router;
