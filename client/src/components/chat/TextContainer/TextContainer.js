@@ -5,17 +5,17 @@ import onlineIcon from '../InfoBar/onlineIcon.png';
 import './TextContainer.css';
 
 const TextContainer = ({ users }) => (
-  <div className="textContainer">
+  <div>
     {
       users
         ? (
           <div>
-            <h4>People currently chatting:</h4>
+            <h4>Users in Chatroom:</h4><hr></hr>
             <div className="activeContainer">
               <h4>
                 {users.map(({name}) => (
                   <div key={name} className="activeItem">
-                    <img alt="Online Icon" src={onlineIcon}/>
+                    <img className="img" alt="Online Icon" src={onlineIcon}/>
                     {name}
                   </div>
                 ))}
