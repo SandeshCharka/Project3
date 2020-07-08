@@ -1,0 +1,32 @@
+#avatar-set {
+  top: 215px;
+
+  button {
+    margin: 5px;
+    outline: 0;
+
+    span {
+      border: solid 2px rgba(0, 0, 0, 0.05);
+    }
+
+    &:focus {
+      span {
+        border-style: dashed;
+        border-color: $blue;
+      }
+    }
+
+    &:hover {
+      span {
+        border-color: $blue;
+      }
+    }
+  }
+
+  .current {
+    span {
+      border-style: solid !important;
+      border-color: $blue !important;
+    }
+  }
+}

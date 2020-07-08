@@ -1,0 +1,56 @@
+$size: 100px;
+
+#profile {
+  width: 100%;
+
+  #image-wrap {
+    margin-bottom: 16px;
+
+    #btn-edit {
+      position: relative;
+      display: inline-block;
+      outline: 0;
+
+      .avatar {
+        width: $size;
+        height: $size;
+        border: solid 4px $gold-2;
+        transition: all 0.1s ease-in-out;
+      }
+
+      i {
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+        opacity: 0.2;
+      }
+
+      &:hover {
+        i {
+          opacity: 1;
+        }
+      }
+
+      &:focus,
+      &.active {
+        .avatar {
+          border-color: $blue;
+        }
+
+        i {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  #nickname-wrap {
+    margin-bottom: 30px;
+
+    input {
+      width: 80%;
+      font-size: $font-size-default;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "author": "Phuong Quyen Le, Ben Fung, Colin Chang, Sandesh Charka",
+  "name": "Quaranchill",
+  "version": "1.0.1",
+  "description": "Quarantine Chat App",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "engine": {
+    "node": "^10.16.*"
+  },
+  "scripts": {
+    "start": "node app",
+    "start:nodemon": "nodemon --watch ./app.js --watch ./controllers"
+  }
+}
