@@ -23,4 +23,3 @@ Our Quaranchill website is a way to reconnect with other people. Quaranchill is 
 3) cd frontend && npm install
 4) cd backend && npm start
 5) cd frontend && npm start
-
