@@ -14,7 +14,7 @@
     "node": "^10.16.*"
   },
   "dependencies": {
-    "concurrently": "^5.0.1"
+    "concurrently": "^5.2.0"
   },
   "scripts": {
     "install": "concurrently \"cd backend && npm install\" \"cd frontend && npm install\"",
