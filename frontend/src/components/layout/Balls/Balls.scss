@@ -1,0 +1,14 @@
+@import 'assets/scss/modules/mixin';
+
+.ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+
+  @include jelly(0.4s, 1);
+}

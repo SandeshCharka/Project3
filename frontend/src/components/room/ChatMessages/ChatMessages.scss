@@ -1,0 +1,94 @@
+$time-pos: -48px;
+
+#messages {
+  padding: 10px;
+
+  .chat {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+
+    .profile {
+      flex-basis: 14%;
+
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+
+      .avatar {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .body {
+      flex-basis: 86%;
+      font-size: 1.4rem;
+
+      .nickname {
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1;
+
+        @include ellipsis;
+      }
+
+      p {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        max-width: 82%;
+        background: $gray;
+        border-radius: 10px;
+        word-break: break-all;
+      }
+
+      .time {
+        position: absolute;
+        bottom: 0;
+        right: $time-pos;
+        font-size: 1rem;
+        color: #c5c5c5;
+      }
+    }
+
+    &.mine {
+      display: flex;
+      justify-content: flex-end;
+
+      .profile {
+        order: 1;
+
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .body {
+        order: 0;
+
+        display: flex;
+        justify-content: flex-end;
+
+        p {
+          background: $blue;
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .time {
+          right: auto;
+          left: $time-pos;
+        }
+      }
+    }
+  }
+
+  .system {
+    margin-bottom: 8px;
+
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: $gray;
+    }
+  }
+}
