@@ -17,4 +17,10 @@ Our Quaranchill website is a way to reconnect with other people. Quaranchill is 
 - Phuong Quyen Le - Front End Design & Implementation
 - Colin Chang - Front End Design & Implementation, Mobile Responsiveness
 
+## Instructions
+1) git clone (repo-url)
+2) cd backend && npm install
+3) cd frontend && npm install
+4) cd backend && npm start
+5) cd frontend && npm start
 
